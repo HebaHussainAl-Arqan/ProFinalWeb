@@ -1,4 +1,4 @@
 @extends('components.app')
 @section('content')
-'marayam'
+'heba'
 @endsection

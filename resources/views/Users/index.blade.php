@@ -2,31 +2,20 @@
 @section('content')
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
             <thead>
                 <tr>
+                    <th>id</th>
                     <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Email</th>
+                    <th>password</th>
+                    <th>Ativ</th>
+
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
-                </tr>
-            </tfoot>
+
             <tbody>
                 <tr>
                     <td>Haley Kennedy</td>

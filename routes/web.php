@@ -22,31 +22,31 @@ Route::get('/users',function(){
 return view('Users/index');
 
 });
-Route::get('/maryam',function(){
+Route::get('/heba',function(){
     return view('Users/create');
 
     });
 
 
 Route::get('/ads',function(){
-    return view('Ads.index');
+    return view('Ads/index');
 
-    })->middleware(['auth'])->name('Ads.index');
+    });
 
 
     Route::get('/Products',function(){
-        return view('Products.index');
+        return view('Products/index');
 
-        })->middleware(['auth'])->name('Products.index');
+        });
 
 
         Route::get('/Categories',function(){
-            return view('Categories.index');
+            return view('Categories/index');
 
-            })->middleware(['auth'])->name('Categories.index');
+            });
 
 
             Route::get('/Managers',function(){
-                return view('Managers.index');
+                return view('Managers/index');
 
-                })->middleware(['auth'])->name('Managers.index');
+                });
