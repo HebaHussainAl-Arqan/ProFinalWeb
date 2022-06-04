@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Models\Ad;
+use App\Models\User;
 
-class AdSeeder extends Seeder
+use Illuminate\Database\Seeder;
+
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +16,6 @@ class AdSeeder extends Seeder
     public function run()
     {
         //
-        Ad::factory()->count(5)->create();
-
+User::factory()->count(1000)->create();
     }
 }

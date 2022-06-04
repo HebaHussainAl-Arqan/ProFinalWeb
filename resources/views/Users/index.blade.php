@@ -1,89 +1,47 @@
 @extends('components.app')
 @section('content')
-<div class="card mb-4">
-    <div class="card-header">
+    <div class="card mb-4">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th style="width: 19.1895%;">ID</th>
+                        <th style="width: 19.1895%;">Name</th>
+                        <th style="width: 19.1895%;">Password</th>
+                        <th style="width: 19.1895%;">Email</th>
+
+                    </tr>
+                </thead>
+
+                <body>
+                    @foreach ($users as $user)
+
+                    @endforeach
+                    <tr>
+                        <td>
+                           {{ $user->id}}
+                        </td>
+                        <td>
+                            {{$user->name}}
+                        </td>
+                        <td>
+                           {{$user->Password}}
+                        </td>
+                        <td>
+                            {{$user->email}}
+                        </td>
+                    </tr>
+                    @endforeach
+                </body>
+            </table>
+        </div>
+    <div class="dataTable_bottom">
+        <nav class="dataTable_pagination">
+            {{$users->links()}}
+        </nav>
     </div>
-    <div class="card-body">
-        <table id="datatablesSimple">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>password</th>
-                    <th>Ativ</th>
 
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>Haley Kennedy</td>
-                    <td>Senior Marketing Designer</td>
-                    <td>London</td>
-                    <td>43</td>
-                    <td>2012/12/18</td>
-                    <td>$313,500</td>
-                </tr>
-                <tr>
-                    <td>Tatyana Fitzpatrick</td>
-                    <td>Regional Director</td>
-                    <td>London</td>
-                    <td>19</td>
-                    <td>2010/03/17</td>
-                    <td>$385,750</td>
-                </tr>
-                <tr>
-                    <td>Michael Silva</td>
-                    <td>Marketing Designer</td>
-                    <td>London</td>
-                    <td>66</td>
-                    <td>2012/11/27</td>
-                    <td>$198,500</td>
-                </tr>
-                <tr>
-                    <td>Paul Byrd</td>
-                    <td>Chief Financial Officer (CFO)</td>
-                    <td>New York</td>
-                    <td>64</td>
-                    <td>2010/06/09</td>
-                    <td>$725,000</td>
-                </tr>
-                <tr>
-                    <td>Gloria Little</td>
-                    <td>Systems Administrator</td>
-                    <td>New York</td>
-                    <td>59</td>
-                    <td>2009/04/10</td>
-                    <td>$237,500</td>
-                </tr>
-                <tr>
-                    <td>Bradley Greer</td>
-                    <td>Software Engineer</td>
-                    <td>London</td>
-                    <td>41</td>
-                    <td>2012/10/13</td>
-                    <td>$132,000</td>
-                </tr>
-                <tr>
-                    <td>Dai Rios</td>
-                    <td>Personnel Lead</td>
-                    <td>Edinburgh</td>
-                    <td>35</td>
-                    <td>2012/09/26</td>
-                    <td>$217,500</td>
-                </tr>
-                <tr>
-                    <td>Jenette Caldwell</td>
-                    <td>Development Lead</td>
-                    <td>New York</td>
-                    <td>30</td>
-                    <td>2011/09/03</td>
-                    <td>$345,000</td>
-                </tr>
-
-            </tbody>
-        </table>
     </div>
-</div>
 @endsection

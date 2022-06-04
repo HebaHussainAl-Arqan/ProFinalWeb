@@ -15,6 +15,7 @@ class AdFactory extends Factory
     {
         return [
             //
+            'image'=>$this->faker->imageUrl,
         ];
     }
 }

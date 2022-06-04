@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\User;
+use App\Models\Ad;
+use App\Models\Product;
+use App\Models\Categorie;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Process\Process;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +24,9 @@ Route::get('/', function () {
 
 
 Route::get('/users',function(){
-return view('Users/index');
+    $users = User::paginate();
+    //paginate تعمل على تقسيم البيانات
+return view('Users/index',compact('users'));
 
 });
 Route::get('/heba',function(){
@@ -29,19 +36,22 @@ Route::get('/heba',function(){
 
 
 Route::get('/ads',function(){
-    return view('Ads/index');
+    $ads = Ad::paginate();
+    return view('Ads/index',compact('ads'));
 
     });
 
 
     Route::get('/Products',function(){
-        return view('Products/index');
+        $Products = Product::paginate();
+        return view('Products/index',compact('Products'));
 
         });
 
 
         Route::get('/Categories',function(){
-            return view('Categories/index');
+            $Categories = Categorie::paginate();
+            return view('Categories/index',compact('Categories'));
 
             });
 
