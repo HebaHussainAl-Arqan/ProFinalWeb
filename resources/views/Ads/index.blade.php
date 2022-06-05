@@ -18,7 +18,6 @@
             <body>
                 @foreach ($ads as $ad)
 
-                @endforeach
                 <tr>
                     <td>
                        {{ $ad->id}}

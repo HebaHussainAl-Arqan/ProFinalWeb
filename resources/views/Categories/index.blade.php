@@ -9,9 +9,10 @@
         <table id="datatablesSimple">
             <thead>
                 <tr>
+
                     <th style="width: 19.1895%;">name</th>
 
-
+ <th style="width: 19.1895%;">Id</th>
 
                 </tr>
             </thead>
@@ -19,11 +20,12 @@
             <body>
                 @foreach ($Categories as $Categorie)
 
-                @endforeach
+
                 <tr>
                     <td>
                        {{ $Categorie->name}}
                     </td>
+                    {{ $Categorie->Id}}
 
 
                 </tr>

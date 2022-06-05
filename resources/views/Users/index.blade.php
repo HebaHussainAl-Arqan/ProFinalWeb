@@ -18,7 +18,7 @@
                 <body>
                     @foreach ($users as $user)
 
-                    @endforeach
+
                     <tr>
                         <td>
                            {{ $user->id}}

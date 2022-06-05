@@ -1,11 +1,6 @@
 <?php
 
-use App\Models\User;
-use App\Models\Ad;
-use App\Models\Product;
-use App\Models\Categorie;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\Process\Process;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,44 +14,45 @@ use Symfony\Component\Process\Process;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view(redirect(route('login')));
 });
+
+Route::get('/dashboard', function () {
+    return redirect('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
 
 
 Route::get('/users',function(){
-    $users = User::paginate();
-    //paginate تعمل على تقسيم البيانات
-return view('Users/index',compact('users'));
+return view('Users/index');
 
 });
-Route::get('/heba',function(){
+
+Route::get('/maryam',function(){
     return view('Users/create');
 
     });
 
 
 Route::get('/ads',function(){
-    $ads = Ad::paginate();
-    return view('Ads/index',compact('ads'));
+    return view('Ads.index');
 
-    });
+    })->middleware(['auth'])->name('Ads.index');
 
 
     Route::get('/Products',function(){
-        $Products = Product::paginate();
-        return view('Products/index',compact('Products'));
+        return view('Products.index');
 
-        });
+        })->middleware(['auth'])->name('Products.index');
 
 
         Route::get('/Categories',function(){
-            $Categories = Categorie::paginate();
-            return view('Categories/index',compact('Categories'));
+            return view('Categories.index');
 
-            });
+            })->middleware(['auth'])->name('Categories.index');
 
 
             Route::get('/Managers',function(){
-                return view('Managers/index');
+                return view('Managers.index');
 
-                });
+                })->middleware(['auth'])->name('Managers.index');
